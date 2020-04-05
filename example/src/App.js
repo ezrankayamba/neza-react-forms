@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import { ExampleComponent } from 'neza-react-forms'
-import 'neza-react-forms/dist/index.css'
+import { CommonForm } from "neza-react-forms";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  const form = {
+    fields: []
+  };
+  return <CommonForm meta={form} />;
+};
 
-export default App
+export default App;
