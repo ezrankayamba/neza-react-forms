@@ -4,7 +4,7 @@ import { CommonForm } from "neza-react-forms";
 
 const App = () => {
   const form = {
-    fields: []
+    fields: [{ field: "username" }]
   };
   return <CommonForm meta={form} />;
 };

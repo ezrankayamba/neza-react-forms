@@ -5,6 +5,7 @@ import { IconAdd, IconMap, IconCaptureLocation } from "../Incons";
 
 class InputControl extends Component {
   constructor(props) {
+    super(props);
     this.state = { popup: false };
   }
 
