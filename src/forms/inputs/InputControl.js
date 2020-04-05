@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ComputedInput from "./ComputedInput";
 import LocationUtils from "../_helpers/LocationUtils";
+import { IconAdd, IconMap, IconCaptureLocation } from "../Incons";
 
 class InputControl extends Component {
   constructor(props) {
@@ -39,7 +40,6 @@ class InputControl extends Component {
       setChanged,
       onShowPopup,
       newOptions,
-      Icons,
       ...rest
     } = this.props;
     return (
@@ -55,7 +55,7 @@ class InputControl extends Component {
               className="btn btn-link p-0 pr-2"
               onClick={() => onShowPopup(field.name)}
             >
-              <Icons.IconAdd />
+              <IconAdd />
             </button>
           )}
           {field.type === "location" && (
@@ -65,14 +65,14 @@ class InputControl extends Component {
                 className="btn btn-link p-0 pl-2 pr-2"
                 onClick={this.captLoc.bind(this)}
               >
-                <Icons.IconCaptureLocation />
+                <IconCaptureLocation />
               </button>
               <button
                 type="button"
                 className="btn btn-link p-0 pl-2 pr-2"
                 onClick={this.selectFrmMap.bind(this)}
               >
-                <Icons.IconMap />
+                <IconMap />
               </button>
             </div>
           )}
