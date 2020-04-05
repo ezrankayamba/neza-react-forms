@@ -19,11 +19,11 @@ class InputControl extends Component {
     const { field } = this.props;
     e.stopPropagation();
     LocationUtils.capture({
-      onSuccess: (loc) => {
+      onSuccess: loc => {
         console.log(loc, document.querySelector(`#${field.name}`));
         this.setVal(field.name, `(${loc.lat}, ${loc.lng})`);
       },
-      onFail: ({ code, message }) => console.log(code, message),
+      onFail: ({ code, message }) => console.log(code, message)
     });
   }
 
@@ -39,9 +39,7 @@ class InputControl extends Component {
       setChanged,
       onShowPopup,
       newOptions,
-      IconAdd,
-      IconCaptureLocation,
-      IconMap,
+      Icons,
       ...rest
     } = this.props;
     return (
@@ -57,7 +55,7 @@ class InputControl extends Component {
               className="btn btn-link p-0 pr-2"
               onClick={() => onShowPopup(field.name)}
             >
-              <IconAdd />
+              <Icons.IconAdd />
             </button>
           )}
           {field.type === "location" && (
@@ -67,14 +65,14 @@ class InputControl extends Component {
                 className="btn btn-link p-0 pl-2 pr-2"
                 onClick={this.captLoc.bind(this)}
               >
-                <IconCaptureLocation />
+                <Icons.IconCaptureLocation />
               </button>
               <button
                 type="button"
                 className="btn btn-link p-0 pl-2 pr-2"
                 onClick={this.selectFrmMap.bind(this)}
               >
-                <IconMap />
+                <Icons.IconMap />
               </button>
             </div>
           )}

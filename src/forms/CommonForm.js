@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./CommonForm.css";
 import InputControl from "./inputs/InputControl";
+import "./CommonForm.css";
 
 const validateForm = errors => {
   let valid = true;
@@ -147,14 +147,7 @@ export class CommonForm extends Component {
 
   render() {
     const { errors, data } = this.state;
-    const {
-      meta,
-      onClose,
-      newOptions,
-      readOnly,
-      encType,
-      IconClose
-    } = this.props;
+    const { meta, onClose, newOptions, readOnly, encType, Icons } = this.props;
     const defaultClose = () => console.log("Close not handled...");
     const handleClose = onClose || defaultClose;
 
@@ -171,7 +164,7 @@ export class CommonForm extends Component {
                   className="float-right btn btn-link p-0 text-warning"
                   onClick={handleClose}
                 >
-                  <IconClose />
+                  <Icons.IconClose />
                 </button>
               </div>
             )}
@@ -204,6 +197,7 @@ export class CommonForm extends Component {
                       noValidate
                       errors={errors}
                       setChanged={this.setChanged}
+                      Icons={Icons}
                     />
                     {f.info && (
                       <div className="info">
