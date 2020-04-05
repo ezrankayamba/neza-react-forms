@@ -4,7 +4,6 @@
   "description": "Forms",
   "author": "ezrankayamba",
   "license": "MIT",
-  "repository": "ezrankayamba/neza-react-forms",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
