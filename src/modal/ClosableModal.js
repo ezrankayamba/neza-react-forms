@@ -10,6 +10,7 @@ const CloseableModal = ({ modalId, handleClose, show, content, ...props }) => {
       handleClose(e);
     }
   };
+  console.log("Test");
   return (
     <div className={showHideClassName} onClick={otherClick} id={modalId}>
       <div className="modal-main p-0">{content}</div>
