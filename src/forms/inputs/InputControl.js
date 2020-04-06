@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ComputedInput from "./ComputedInput";
-import LocationUtils from "../_helpers/LocationUtils";
-import { IconAdd, IconMap, IconCaptureLocation } from "../Incons";
+import LocationUtils from "../../_helpers/LocationUtils";
+import { IconAdd, IconMap, IconCaptureLocation } from "../../_helpers/Incons";
 
 class InputControl extends Component {
   constructor(props) {

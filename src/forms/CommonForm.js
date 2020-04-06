@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import InputControl from "./inputs/InputControl";
 import "./CommonForm.css";
-import { IconClose } from "./Incons";
+import { IconClose } from "../_helpers/Incons";
 
 const validateForm = errors => {
   let valid = true;
