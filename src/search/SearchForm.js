@@ -58,3 +58,5 @@ export const SearchForm = ({ searchFields, onSearch }) => {
     </div>
   );
 };
+
+export default SearchForm;
