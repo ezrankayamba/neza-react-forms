@@ -4,4 +4,5 @@ export { default as CloseableModal } from "./modal/CloseableModal";
 export { default as Snackbar } from "./notify/Snackbar";
 export { default as LoadingIndicator } from "./notify/LoadingIndicator";
 export { default as File } from "./forms/file/File";
+export { default as SearchForm } from "./search/SearchForm";
 export * from "./_helpers/Incons";
