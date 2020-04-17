@@ -44,3 +44,6 @@ export const IconLoading = () => (
     <span>Loading ...</span>
   </div>
 );
+export const IconSearch = () => (
+  <i className="ion ion-ios-search-strong tx-16"></i>
+);
